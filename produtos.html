@@ -2,7 +2,7 @@
 <html lang="pt-BR" style="font-size: 47.2px;">
 <head>
     <meta charset="utf-8">
-    <title>Ironpeak Industries - Plano Dourado</title>
+    <title>Microsoft - Plano Dourado</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="full-screen" content="true">
@@ -10,21 +10,20 @@
     <meta name="360-fullscreen" content="true">
     <meta name="renderer" content="webkit">
     <style>
-        /* Tema dourado brilhante com excelente legibilidade */
+        /* Tema azul Microsoft com cores atualizadas - SEM AMARELO */
         :root {
-            --gold-light: #FFD700;
-            --gold-medium: #D4AF37;
-            --gold-dark: #B8860B;
-            --gold-darker: #8B6914;
-            --gold-gradient: linear-gradient(135deg, #FFD700, #D4AF37, #B8860B);
-            --gold-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-            --gold-glow: 0 0 10px rgba(255, 215, 0, 0.5);
+            --microsoft-blue: #0078D4; /* Azul oficial da Microsoft */
+            --microsoft-blue-dark: #005A9E; /* Azul escuro Microsoft */
+            --microsoft-blue-light: #50B0F0; /* Azul claro Microsoft */
+            --microsoft-gradient: linear-gradient(135deg, #0078D4, #005A9E);
+            --microsoft-shadow: 0 4px 15px rgba(0, 120, 212, 0.3);
             --text-dark: #1a1a1a;
-            --text-light: #ffffff;
-            --text-contrast: #000000;
+            --text-light: #FFFFFF; /* BRANCO PURO */
+            --text-contrast: #FFFFFF; /* BRANCO PURO */
             --bg-dark: #1a1a1a;
             --bg-medium: #2a2a2a;
             --bg-light: #3a3a3a;
+            --pure-white: #FFFFFF; /* BRANCO PURO */
         }
 
         * {
@@ -57,19 +56,19 @@
             overflow: hidden;
         }
 
-        /* Cabeçalho fixo dourado */
+        /* Cabeçalho fixo azul Microsoft */
         .headers {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: var(--gold-gradient) !important;
-            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.5);
+            background: var(--microsoft-gradient) !important;
+            box-shadow: 0 2px 10px rgba(0, 90, 158, 0.5);
         }
 
         .head {
-            background: var(--gold-gradient) !important;
+            background: var(--microsoft-gradient) !important;
         }
 
         /* Container de conteúdo rolável */
@@ -86,15 +85,15 @@
             min-height: 100%;
         }
 
-        /* Rodapé fixo dourado */
+        /* Rodapé fixo azul Microsoft */
         .footer {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: var(--gold-gradient) !important;
-            box-shadow: 0 -2px 10px rgba(212, 175, 55, 0.5);
+            background: var(--microsoft-gradient) !important;
+            box-shadow: 0 -2px 10px rgba(0, 90, 158, 0.5);
         }
 
         /* Estilos para o rodapé */
@@ -103,7 +102,7 @@
         }
 
         .footers .item {
-            color: var(--text-contrast) !important;
+            color: var(--pure-white) !important; /* BRANCO PURO */
             text-align: center;
             padding: 5px;
             cursor: pointer;
@@ -125,7 +124,7 @@
 
         .footers span {
             font-size: 12px;
-            color: var(--text-contrast) !important;
+            color: var(--pure-white) !important; /* BRANCO PURO */
             font-weight: 600;
         }
 
@@ -140,8 +139,8 @@
             background-color: var(--bg-medium);
             border-radius: 12px;
             margin-bottom: 15px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: var(--gold-shadow);
+            border: 1px solid rgba(0, 120, 212, 0.3);
+            box-shadow: var(--microsoft-shadow);
             transition: all 0.3s ease;
         }
 
@@ -160,21 +159,20 @@
             height: 50px;
             border-radius: 8px;
             object-fit: cover;
-            border: 2px solid var(--gold-medium);
+            border: 2px solid var(--microsoft-blue);
         }
 
         .n {
             font-weight: bold;
-            color: var(--text-light);
+            color: var(--pure-white) !important; /* BRANCO PURO */
             margin-bottom: 5px;
             font-size: 16px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .tag span {
             display: inline-block;
-            background-color: var(--gold-medium);
-            color: var(--text-contrast);
+            background-color: var(--microsoft-blue);
+            color: var(--pure-white) !important; /* BRANCO PURO */
             padding: 3px 10px;
             border-radius: 12px;
             font-size: 12px;
@@ -183,21 +181,21 @@
         }
 
         button.on {
-            background: var(--gold-gradient);
-            color: var(--text-contrast);
+            background: var(--microsoft-gradient);
+            color: var(--pure-white) !important; /* BRANCO PURO */
             border: none;
             padding: 10px 18px;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: bold;
-            box-shadow: var(--gold-shadow);
+            box-shadow: var(--microsoft-shadow);
         }
 
         button.on:hover {
-            background: var(--gold-gradient);
+            background: var(--microsoft-gradient);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 6px 20px rgba(0, 120, 212, 0.5);
         }
 
         .it.flex {
@@ -214,15 +212,14 @@
 
         .s {
             font-weight: bold;
-            color: var(--gold-light);
+            color: var(--pure-white) !important; /* BRANCO PURO para números */
             margin-bottom: 5px;
             font-size: 16px;
-            text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
         }
 
         .li .n {
             font-size: 13px;
-            color: #cccccc;
+            color: var(--pure-white) !important; /* BRANCO PURO */
             font-weight: normal;
         }
 
@@ -234,7 +231,7 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
-            color: var(--text-light);
+            color: var(--pure-white) !important; /* BRANCO PURO */
             font-weight: 600;
         }
 
@@ -249,7 +246,7 @@
         .x span {
             display: block;
             height: 100%;
-            background: var(--gold-gradient);
+            background: var(--microsoft-gradient);
             border-radius: 10px;
             position: relative;
         }
@@ -259,16 +256,14 @@
             right: 5px;
             top: -20px;
             font-size: 12px;
-            color: var(--gold-light);
+            color: var(--pure-white) !important; /* BRANCO PURO */
             font-weight: bold;
-            text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
         }
 
         /* Texto em branco para elementos importantes */
         .head .name {
-            color: var(--text-contrast) !important;
+            color: var(--pure-white) !important; /* BRANCO PURO */
             font-weight: bold;
-            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
         }
 
         .myName img {
@@ -316,7 +311,7 @@
         .list li[data-v-11bc267c] .n {
             font-size: 18px;
             font-weight: 700;
-            color: var(--text-light);
+            color: var(--pure-white) !important; /* BRANCO PURO */
             margin-bottom: 8px;
         }
 
@@ -334,21 +329,40 @@
             font-weight: 600;
         }
 
-        /* Efeitos de brilho para elementos importantes */
-        .gold-glow {
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+        /* Efeitos de brilho removidos (eram amarelos) */
+        .microsoft-glow {
+            box-shadow: 0 0 15px rgba(0, 120, 212, 0.7);
         }
 
-        .gold-text {
-            color: var(--gold-light);
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        .microsoft-text {
+            color: var(--microsoft-blue-light);
         }
 
         /* Animações suaves */
         .list li, button.on {
             transition: all 0.3s ease;
         }
+
+        /* Garantir que TODOS os textos sejam brancos */
+        .list li[data-v-11bc267c] * {
+            color: var(--pure-white) !important;
+        }
+
+        .txt div, .txt div:first-child, .txt div:last-child {
+            color: var(--pure-white) !important;
+        }
+
+        /* Números em branco */
+        .s, .li .s, .it.flex .s {
+            color: var(--pure-white) !important;
+        }
+
+        /* Porcentagens em branco */
+        .x var {
+            color: var(--pure-white) !important;
+        }
     </style>
+    <!-- Resto do código HTML permanece igual -->
     <link href="app.c1933b14.css" rel="preload" as="style">
     <link href="chunk-vant.d14f5539.css" rel="preload" as="style">
     <link href="chunk-vendors.794edbf9.css" rel="preload" as="style">
@@ -385,7 +399,7 @@
                         <div data-v-a53c4a36="" class="myName">
                             <img data-v-a53c4a36="" src="img/logo1.jpg" alt="">
                         </div>
-                        <div data-v-a53c4a36="" class="name tac">Ironpeak Industries</div>
+                        <div data-v-a53c4a36="" class="name tac">Microsoft</div>
                         <div data-v-a53c4a36="" class="flex1"></div>
                         <div data-v-a53c4a36="" class="lang">
                             <img data-v-a53c4a36="" src="img/logo.png" alt="">
@@ -407,401 +421,97 @@
                     <li data-v-11bc267c="" data-v-6e534c71="">
                         <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
                             <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 1" data-src="img/baner1.jpg" src="img/baner2.jpg" lazy="loaded">
+                                <img data-v-11bc267c="" data-v-6e534c71="" alt="VIP 1" data-src="img/baner1.jpg" src="img/baner2.jpg" lazy="loaded">
                             </div>
                             <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 1</div>
+                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">VIP 1</div>
                                 <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Investimento: 5.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Ganho diário: 500 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Prazo: 90 dias</span>
                                 </div>
                             </div>
                             <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip.html'">Comprar</button>
                         </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">500 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">2.500 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">45.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
                     </li>
                     <li data-v-11bc267c="" data-v-6e534c71="">
                         <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
                             <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 2" data-src="img/baner1.jpg" src="img/baner3.jpg" lazy="loaded">
+                                <img data-v-11bc267c="" data-v-6e534c71="" alt="VIP 2" data-src="img/baner1.jpg" src="img/baner3.jpg" lazy="loaded">
                             </div>
                             <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 2</div>
+                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">VIP 2</div>
                                 <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Investimento: 10.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Ganho diário: 1.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Prazo: 90 dias</span>
                                 </div>
                             </div>
                             <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip2.html'">Comprar</button>
                         </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">1.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">5.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">90.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
                     </li>
                     <li data-v-11bc267c="" data-v-6e534c71="">
                         <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
                             <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 3" data-src="https://aitech360.site/public/upload/package/1755383490XRj.jpeg" src="img/baner4.jpg" lazy="loaded">
+                                <img data-v-11bc267c="" data-v-6e534c71="" alt="VIP 3" data-src="img/baner4.jpg" src="img/baner4.jpg" lazy="loaded">
                             </div>
                             <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 3</div>
+                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">VIP 3</div>
                                 <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Investimento: 20.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Ganho diário: 2.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Prazo: 90 dias</span>
                                 </div>
                             </div>
                             <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip3.html'">Comprar</button>
                         </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">2.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">10.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">180.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
                     </li>
                     <li data-v-11bc267c="" data-v-6e534c71="">
                         <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
                             <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 4" data-src="https://aitech360.site/public/upload/package/1755383517yNE.jpeg" src="img/baner5.jpg" lazy="loaded">
+                                <img data-v-11bc267c="" data-v-6e534c71="" alt="VIP 4" data-src="img/baner5.jpg" src="img/baner5.jpg" lazy="loaded">
                             </div>
                             <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 4</div>
+                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">VIP 4</div>
                                 <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Investimento: 40.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Ganho diário: 4.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Prazo: 90 dias</span>
                                 </div>
                             </div>
                             <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip4.html'">Comprar</button>
                         </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">6.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">30.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">540.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
                     </li>
                     <li data-v-11bc267c="" data-v-6e534c71="">
                         <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
                             <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 5" data-src="https://aitech360.site/public/upload/package/1755383530Uyz.jpeg" src="img/baner6.jpg" lazy="loaded">
+                                <img data-v-11bc267c="" data-v-6e534c71="" alt="VIP 5" data-src="img/baner6.jpg" src="img/baner6.jpg" lazy="loaded">
                             </div>
                             <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 5</div>
+                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">VIP 5</div>
                                 <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Investimento: 80.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Ganho diário: 8.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Prazo: 90 dias</span>
                                 </div>
                             </div>
                             <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip5.html'">Comprar</button>
                         </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">16.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">80.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">1.440.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
                     </li>
                     <li data-v-11bc267c="" data-v-6e534c71="">
                         <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
                             <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 6" data-src="https://aitech360.site/public/upload/package/1755383541OeO.jpeg" src="img/baner7.jpg" lazy="loaded">
+                                <img data-v-11bc267c="" data-v-6e534c71="" alt="VIP 6" data-src="img/baner7.jpg" src="img/baner7.jpg" lazy="loaded">
                             </div>
                             <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 6</div>
+                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">VIP 6</div>
                                 <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Investimento: 100.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Ganho diário: 10.000 Kz</span>
+                                    <span data-v-11bc267c="" data-v-6e534c71="">Prazo: 90 dias</span>
                                 </div>
                             </div>
                             <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip6.html'">Comprar</button>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">34.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">150.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">3.060.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-v-11bc267c="" data-v-6e534c71="">
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 7" data-src="https://aitech360.site/public/upload/package/1755383791ZWi.jpeg" src="img/baner8.jpg" lazy="loaded">
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 7</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
-                                </div>
-                            </div>
-                            <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip7.html'">Comprar</button>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">60.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">300.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">5.400.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-v-11bc267c="" data-v-6e534c71="">
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 8" data-src="https://aitech360.site/public/upload/package/1755383811Onv.jpg" src="img/logo.png" lazy="loaded">
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 8</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
-                                </div>
-                            </div>
-                            <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip8.html'">Comprar</button>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">125.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">600.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">11.250.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-v-11bc267c="" data-v-6e534c71="">
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 9" data-src="https://aitech360.site/public/upload/package/1755383829MzA.jpeg" src="img/produto9.jfif" lazy="loaded">
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 9</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
-                                </div>
-                            </div>
-                            <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip9.html'">Comprar</button>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">300.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">1.200.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">27.000.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-v-11bc267c="" data-v-6e534c71="">
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="he flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="ico">
-                                <img data-v-11bc267c="" data-v-6e534c71="" alt="Ironpeak Industries 10" data-src="https://aitech360.site/public/upload/package/1755383873rSp.jpeg" src="img/produto10.jfif" lazy="loaded">
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="flex1">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Ironpeak Industries 10</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="tag">
-                                    <span data-v-11bc267c="" data-v-6e534c71="">Para entrar</span>
-                                    <span data-v-11bc267c="" data-v-6e534c71="">amigável para novatos</span>
-                                </div>
-                            </div>
-                            <button data-v-11bc267c="" data-v-6e534c71="" class="on" onclick="window.location.href='/vip10.html'">Comprar</button>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="it flex">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">400.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Rendimento diário (20%)</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">2.000.000 Kz</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Faixa de preço</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="li">
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="s">90 Dias</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="" class="n">Período de tesouraria</div>
-                            </div>
-                        </div>
-                        <div data-v-11bc267c="" data-v-6e534c71="" class="jindu">
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="txt">
-                                <div data-v-11bc267c="" data-v-6e534c71="">Renda total</div>
-                                <div data-v-11bc267c="" data-v-6e534c71="">36.000.000 Kz</div>
-                            </div>
-                            <div data-v-11bc267c="" data-v-6e534c71="" class="x">
-                                <span data-v-11bc267c="" data-v-6e534c71="" style="width: 99.99%;">
-                                    <var data-v-11bc267c="" data-v-6e534c71="">99.99% </var>
-                                </span>
-                            </div>
                         </div>
                     </li>
                 </ul>

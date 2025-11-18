@@ -776,80 +776,35 @@
 
                     <!-- Fluxo de Depósito -->
                     <div id="depositFlow">
-                        <!-- Passo 1: Valor do Depósito -->
-                        <div class="layer-1" id="step1">
+                        <!-- NOVO FLUXO DE DEPÓSITO: CONTAS BANCÁRIAS -->
+                        <div class="layer-1">
+                            <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--gold-primary);">Depósito via Conta Bancária</h3>
+                            <div class="layer-2">
+                                <div class="layer-3" style="margin-bottom: 1.5rem;">
+                                    <strong style="color: var(--gold-primary);">Banco Atlântico</strong><br>
+                                    <span>IBAN: 0055 0000 67198080101 31</span><br>
+                                    <span>Nome: Francisco Joaquim Mulombo</span>
+                                </div>
+                                <div class="layer-3" style="margin-bottom: 1.5rem;">
+                                    <strong style="color: var(--gold-primary);">Banco BAI</strong><br>
+                                    <span>IBAN: 0040 0000 87887243101 56</span><br>
+                                    <span>Nome: Luís Donato Caluli Anastácio</span>
+                                </div>
+                                <div class="layer-3" style="margin-bottom: 1.5rem;">
+                                    <strong style="color: var(--gold-primary);">Banco BFA</strong><br>
+                                    <span>IBAN: 0006 00005926998730188</span><br>
+                                    <span>Nome: Jacinto Jorge Elias Dumbe</span>
+                                </div>
+                            </div>
                             <div class="form-group">
-                                <label class="form-label">Valor do Depósito (KZ)</label>
-                                <input type="number" class="form-input" id="depositAmount" min="1000" placeholder="Mínimo 1.000 KZ" required inputmode="numeric">
-                                
-                                <div class="quick-amounts">
-                                    <button type="button" class="amount-btn" onclick="fillAmount(1000)">1.000 KZ</button>
-                                    <button type="button" class="amount-btn" onclick="fillAmount(2500)">2.500 KZ</button>
-                                    <button type="button" class="amount-btn" onclick="fillAmount(5000)">5.000 KZ</button>
-                                    <button type="button" class="amount-btn" onclick="fillAmount(10000)">10.000 KZ</button>
-                                    <button type="button" class="amount-btn" onclick="fillAmount(25000)">25.000 KZ</button>
-                                    <button type="button" class="amount-btn" onclick="fillAmount(50000)">50.000 KZ</button>
-                                    <button type="button" class="amount-btn" onclick="fillAmount(100000)">100.000 KZ</button>
+                                <label class="form-label">Comprovante de Transferência</label>
+                                <div class="receipt-upload" onclick="openGallery()">
+                                    <input type="file" id="receiptInput" accept="image/*" style="display: none;" onchange="handleReceiptUpload(event)">
+                                    <img src="https://i.postimg.cc/qqNqD3XK/camera.png" alt="Upload" width="50" style="filter: brightness(0) invert(1);">
+                                    <p style="margin-top: 1rem;">Toque para enviar o comprovante</p>
                                 </div>
+                                <img id="receiptPreview" class="receipt-preview" style="display: none;">
                             </div>
-
-                            <button type="button" class="submit-btn" onclick="proceedToExpressNumber()">Continuar</button>
-                        </div>
-
-                        <!-- Passo 2: Número Express -->
-                        <div class="layer-1" id="step2" style="display: none;">
-                            <div class="layer-2">
-                                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--gold-primary);">Transferência Express</h3>
-                                
-                                <div class="express-number">
-                                    <div class="express-label">NÚMERO EXPRESS</div>
-                                    925241374
-                                </div>
-
-                                <div class="layer-3">
-                                    <div style="text-align: center; color: var(--gold-light); margin-bottom: 1rem;">
-                                        <strong>Transfira para o número Express acima</strong>
-                                    </div>
-                                    <div style="text-align: center; font-size: 0.9rem; color: var(--gold-light);">
-                                        O valor refletirá na sua conta após 5 minutos
-                                    </div>
-                                </div>
-
-                                <div style="display: flex; justify-content: center; margin-top: 1.5rem;">
-                                    <button class="copy-btn" onclick="copyExpressNumber()">Copiar Número</button>
-                                </div>
-                            </div>
-
-                            <button type="button" class="submit-btn" onclick="proceedToReceipt()">Já Transferi</button>
-                        </div>
-
-                        <!-- Passo 3: Envio do Comprovante -->
-                        <div class="layer-1" id="step3" style="display: none;">
-                            <div class="layer-2">
-                                <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--gold-primary);">Enviar Comprovante</h3>
-                                
-                                <div class="layer-3">
-                                    <div class="bank-detail-item">
-                                        <span>Número Express:</span>
-                                        <strong>925241374</strong>
-                                    </div>
-                                    <div class="bank-detail-item">
-                                        <span>Valor:</span>
-                                        <strong id="displayAmount">- KZ</strong>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="form-label">Comprovante de Transferência</label>
-                                    <div class="receipt-upload" onclick="openGallery()">
-                                        <input type="file" id="receiptInput" accept="image/*" style="display: none;" onchange="handleReceiptUpload(event)">
-                                        <img src="https://i.postimg.cc/qqNqD3XK/camera.png" alt="Upload" width="50" style="filter: brightness(0) invert(1);">
-                                        <p style="margin-top: 1rem;">Toque para enviar o comprovante</p>
-                                    </div>
-                                    <img id="receiptPreview" class="receipt-preview" style="display: none;">
-                                </div>
-                            </div>
-
                             <button type="button" class="submit-btn" id="submitDepositBtn" onclick="submitDeposit()" disabled>Confirmar Depósito</button>
                         </div>
                     </div>

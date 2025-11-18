@@ -11,15 +11,23 @@
     <meta name="360-fullscreen" content="true">
     <meta name="renderer" content="webkit">
     <style>
-        /* Tema convertido para preto e branco */
+        /* Tema Microsoft Natural - Mesmo esquema do formulário */
         :root {
-            --coffee-dark: #000000;
-            --coffee-medium: #333333;
-            --coffee-light: #666666;
-            --coffee-cream: #FFFFFF;
-            --coffee-lighter: #F5F5F5;
-            --coffee-accent: #000000;
-            --coffee-gradient: linear-gradient(90deg, #000000, #333333);
+            --ms-blue-primary: #0078D4;
+            --ms-blue-secondary: #0078D4;
+            --ms-blue-dark: #0078D4;
+            --ms-blue-light: #0078D4;
+            --ms-blue-accent: #0078D4;
+            --ms-gray-light: #0078D4;
+            --ms-gray-medium: #0078D4;
+            --ms-gray-dark: #0078D4;
+            --ms-white: #FFFFFF;
+            --ms-black: #000000;
+            --ms-shadow: rgba(0, 120, 212, 0.3);
+            --ms-gradient: linear-gradient(135deg, #0078D4 0%, #0078D4 100%);
+            --ms-gradient-light: linear-gradient(135deg, #0078D4 0%, #0078D4 100%);
+            --ms-bg-light: rgba(255, 255, 255, 0.1);
+            --ms-bg-dark: rgba(45, 45, 45, 0.9);
         }
 
         * {
@@ -32,9 +40,12 @@
         body {
             width: 100%;
             height: 100%;
-            background-color: var(--coffee-lighter);
-            color: var(--coffee-dark);
+            background: linear-gradient(135deg, #0078D4 0%, #0078D4 100%);
+            background-size: 100% 300px;
+            background-repeat: no-repeat;
+            color: var(--ms-white);
             overflow-x: hidden;
+            font-family: "Segoe UI", sans-serif;
         }
 
         /* Estrutura principal corrigida */
@@ -58,11 +69,13 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: var(--coffee-gradient) !important;
+            background: var(--ms-gradient) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid var(--ms-blue-primary);
         }
 
         .head {
-            background: var(--coffee-gradient) !important;
+            background: var(--ms-gradient) !important;
         }
 
         /* Container de conteúdo rolável */
@@ -85,7 +98,9 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: var(--coffee-gradient) !important;
+            background: var(--ms-white) !important;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid var(--ms-blue-primary);
         }
 
         /* Estilos existentes mantidos */
@@ -94,131 +109,163 @@
         }
 
         .bgs {
-            background-color: var(--coffee-lighter);
+            background-color: transparent;
         }
 
         .itemBox {
-            background-color: var(--coffee-cream);
+            background-color: var(--ms-bg-dark);
             border-radius: 12px;
             margin: 10px;
             padding: 15px;
-            border: 1px solid var(--coffee-light);
+            border: 1px solid var(--ms-blue-primary);
+            box-shadow: 0 4px 15px var(--ms-shadow);
+            backdrop-filter: blur(10px);
         }
 
         .income_box {
-            background: var(--coffee-gradient) !important;
-            color: white !important;
+            background: var(--ms-gradient) !important;
+            color: var(--ms-white) !important;
             border-radius: 12px;
             padding: 15px;
+            border: 1px solid var(--ms-blue-primary);
+            box-shadow: 0 4px 15px var(--ms-shadow);
         }
 
         .income_box .name {
-            color: white !important;
+            color: var(--ms-white) !important;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .income_box .am {
-            color: white !important;
+            color: var(--ms-white) !important;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .income_box .qb li {
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255, 255, 255, 0.15);
             border-radius: 8px;
-            padding: 10px;
+            padding: 12px;
             margin: 5px 0;
-        }
-
-        .income_box .qb .n {
-            color: white !important;
-        }
-
-        .income_box .qb .s {
-            color: white !important;
-            font-weight: bold;
-        }
-
-        .bonus-info {
-            background: var(--coffee-cream) !important;
-            border: 1px solid var(--coffee-medium) !important;
-            color: var(--coffee-dark) !important;
-            border-radius: 8px;
-            margin: 10px;
-            padding: 15px;
-        }
-
-        .tab {
-            background-color: var(--coffee-cream);
-            border-radius: 12px;
-            margin: 10px;
-            padding: 10px;
-        }
-
-        .tab li {
-            background-color: var(--coffee-lighter);
-            border: 1px solid var(--coffee-light);
-            border-radius: 8px;
-            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
 
-        .tab li:hover {
-            background-color: var(--coffee-medium);
-        }
-
-        .tab .s0, .tab .s1 {
-            color: var(--coffee-dark) !important;
-        }
-
-        .tab li:hover .s0, .tab li:hover .s1 {
-            color: white !important;
-        }
-
-        .nav1 {
-            background-color: var(--coffee-cream);
-        }
-
-        .nav1 li {
-            background-color: var(--coffee-lighter);
-            border: 1px solid var(--coffee-light);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .nav1 li:hover {
-            background-color: var(--coffee-medium);
+        .income_box .qb li:hover {
+            background-color: rgba(255, 255, 255, 0.25);
             transform: translateY(-2px);
         }
 
+        .income_box .qb .n {
+            color: var(--ms-white) !important;
+            font-weight: 500;
+        }
+
+        .income_box .qb .s {
+            color: var(--ms-white) !important;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .bonus-info {
+            background: var(--ms-bg-dark) !important;
+            border: 1px solid var(--ms-blue-primary) !important;
+            color: var(--ms-white) !important;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 15px var(--ms-shadow);
+        }
+
+        .tab {
+            background-color: var(--ms-bg-dark);
+            border-radius: 12px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid var(--ms-blue-primary);
+            box-shadow: 0 4px 15px var(--ms-shadow);
+        }
+
+        .tab li {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--ms-blue-primary);
+            border-radius: 8px;
+            padding: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .tab li:hover {
+            background-color: var(--ms-blue-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--ms-shadow);
+        }
+
+        .tab .s0, .tab .s1 {
+            color: var(--ms-white) !important;
+            font-weight: 600;
+        }
+
+        .tab li:hover .s0, .tab li:hover .s1 {
+            color: var(--ms-white) !important;
+        }
+
+        .nav1 {
+            background-color: transparent;
+        }
+
+        .nav1 li {
+            background-color: var(--ms-bg-dark);
+            border: 1px solid var(--ms-blue-primary);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin: 5px 0;
+            box-shadow: 0 4px 15px var(--ms-shadow);
+        }
+
+        .nav1 li:hover {
+            background-color: var(--ms-blue-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--ms-shadow);
+        }
+
         .nav1 li p {
-            color: var(--coffee-dark) !important;
+            color: var(--ms-white) !important;
+            font-weight: 500;
         }
 
         .nav1 li:hover p {
-            color: white !important;
+            color: var(--ms-white) !important;
         }
 
         .lucku_bann {
-            background-color: var(--coffee-cream);
+            background-color: var(--ms-bg-dark);
             border-radius: 12px;
             margin: 10px;
             padding: 15px;
-            border: 1px solid var(--coffee-light);
+            border: 1px solid var(--ms-blue-primary);
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px var(--ms-shadow);
         }
 
         .lucku_bann:hover {
-            background-color: var(--coffee-medium);
-            color: white !important;
+            background-color: var(--ms-blue-primary);
+            color: var(--ms-white) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--ms-shadow);
         }
 
         .lucku_bann .item {
-            color: var(--coffee-dark);
+            color: var(--ms-white);
             font-weight: bold;
         }
 
         .lucku_bann:hover .item {
-            color: white !important;
+            color: var(--ms-white) !important;
         }
 
         .footers {
@@ -226,41 +273,56 @@
         }
 
         .footers .item {
-            color: white !important;
+            color: var(--ms-blue-primary) !important;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            border-radius: 8px;
+            margin: 0 2px;
         }
 
         .footers .item:hover {
-            background-color: rgba(255,255,255,0.1);
+            background-color: var(--ms-blue-primary);
+            color: var(--ms-white) !important;
+        }
+
+        .footers .item .on {
+            color: var(--ms-blue-primary) !important;
+            background-color: rgba(0, 120, 212, 0.1);
             border-radius: 8px;
         }
 
         /* Texto em branco para elementos importantes */
         .head .name {
-            color: white !important;
+            color: var(--ms-white) !important;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
         }
 
         #uid div {
-            color: white !important;
+            color: var(--ms-white) !important;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         #uid div:first-child {
-            color: rgba(255,255,255,0.8) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
         }
 
         /* Popup e modais */
         .popup_box {
-            background-color: var(--coffee-cream);
-            border: 1px solid var(--coffee-light);
+            background-color: var(--ms-bg-dark);
+            border: 1px solid var(--ms-blue-primary);
             border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .line ul li {
-            color: var(--coffee-dark);
+            color: var(--ms-white);
+            transition: all 0.3s ease;
         }
 
         .line ul li:hover {
-            background-color: var(--coffee-medium);
-            color: white !important;
+            background-color: var(--ms-blue-primary);
+            color: var(--ms-white) !important;
         }
 
         /* Botão de sair no final */
@@ -270,8 +332,8 @@
         }
 
         .logout-btn {
-            background-color: var(--coffee-cream);
-            border: 1px solid var(--coffee-light);
+            background-color: var(--ms-bg-dark);
+            border: 1px solid var(--ms-blue-primary);
             border-radius: 12px;
             padding: 15px;
             text-align: center;
@@ -279,12 +341,125 @@
             transition: all 0.3s ease;
             font-weight: bold;
             width: 100%;
-            color: var(--coffee-dark);
+            color: var(--ms-white);
+            box-shadow: 0 4px 15px var(--ms-shadow);
         }
 
         .logout-btn:hover {
-            background-color: var(--coffee-medium);
-            color: white !important;
+            background-color: var(--ms-blue-primary);
+            color: var(--ms-white) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--ms-shadow);
+        }
+
+        /* Efeitos visuais adicionais */
+        .headers::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--ms-blue-accent), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        /* Loading overlay */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(0, 120, 212, 0.3);
+            border-top: 4px solid var(--ms-blue-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Botões com efeito de brilho */
+        .container .btn {
+            background: var(--ms-gradient) !important;
+            color: var(--ms-white) !important;
+            border: none !important;
+            border-radius: 12px !important;
+            padding: 15px 0 !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 15px var(--ms-shadow) !important;
+            transition: all 0.3s ease !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .container .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .container .btn:hover::before {
+            left: 100%;
+        }
+
+        .container .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 120, 212, 0.4);
+        }
+
+        /* Ajustes para imagens */
+        img {
+            transition: transform 0.3s ease;
+        }
+
+        .nav1 li:hover img,
+        .tab li:hover img,
+        .footers .item:hover img {
+            transform: scale(1.1);
+            filter: brightness(0) invert(1);
+        }
+
+        /* Efeito de brilho nos cards */
+        .itemBox::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--ms-blue-accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .itemBox:hover::before {
+            opacity: 1;
         }
     </style>
     <link href="https://aitech360.site/public/static/css/app.c1933b14.css" rel="preload" as="style">
@@ -316,7 +491,7 @@
                     <div data-v-a53c4a36="" class="back"><img data-v-a53c4a36=""
                                                               src="https://i.postimg.cc/0yGRHYfx/image.png"
                                                               alt=""></div>
-                    <div data-v-a53c4a36="" class="name tac" style="color: white !important;"> Ironpeak Industries</div>
+                    <div data-v-a53c4a36="" class="name tac" style="color: white !important;"> Microsoft</div>
                     <div data-v-a53c4a36="" class="flex1"></div>
                 </div>
                 <div data-v-a53c4a36=""></div>
@@ -374,14 +549,14 @@
                                                                                             data-v-6e534c71=""
                                                                                             src="img/recarregar.png"
                                                                                             alt="">
-                                <div data-v-35d43c50="" data-v-6e534c71="" class="s0" style="color: var(--coffee-dark) !important;">Recarregar</div>
+                                <div data-v-35d43c50="" data-v-6e534c71="" class="s0" style="color: var(--ms-white) !important;">Recarregar</div>
                             </li>
                             <li data-v-35d43c50="" data-v-6e534c71=""
                                 onclick="window.location.href='/retirada.html'"><img data-v-35d43c50=""
                                                                                                  data-v-6e534c71=""
                                                                                                  src="img/retirar.png"
                                                                                                  alt="">
-                                <div data-v-35d43c50="" data-v-6e534c71="" class="s1" style="color: var(--coffee-dark) !important;">Retirar</div>
+                                <div data-v-35d43c50="" data-v-6e534c71="" class="s1" style="color: var(--ms-white) !important;">Retirar</div>
                             </li>
                         </ul> <div data-v-98526a88="" data-v-6e534c71="" class="lucku_bann"
                     </div>
@@ -397,21 +572,21 @@
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
                                                                             src="img/reca1.png"
                                                                             alt="">
-                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Registro de recarga</p></div>
+                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--ms-white) !important;">Registro de recarga</p></div>
                         </li>
                         <li data-v-98526a88="" data-v-6e534c71=""
                             onclick="window.location.href='/historico.html'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
                                                                             src="img/reca2.png"
                                                                             alt="">
-                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Retirar registro</p></div>
+                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--ms-white) !important;">Retirar registro</p></div>
                         </li>
 
                         <li data-v-98526a88="" data-v-6e534c71="" onclick="window.location.href='/seting.html'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
                                                                             src="img/seting.png"
                                                                             alt="">
-                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Alteração de senha</p></div>
+                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--ms-white) !important;">Alteração de senha</p></div>
                         </li>
 
          </div>
@@ -423,7 +598,7 @@
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
                                                                             src="img/vip.png"
                                                                             alt="">
-                                <p data-v-98526a88="" data-v-6e534c71="#" style="color: var(--coffee-dark) !important;">Cadastrar Chave Pix</p></div>
+                                <p data-v-98526a88="" data-v-6e534c71="#" style="color: var(--ms-white) !important;">Cadastrar Chave Pix</p></div>
                         </li>
 
                          <li data-v-98526a88="" data-v-6e534c71=""
@@ -431,15 +606,15 @@
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
                                                                             src="img/registros.png"
                                                                             alt="">
-                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Registro <br> Geral</p></div>
+                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--ms-white) !important;">Registro <br> Geral</p></div>
                         </li>
                         
 
-                        <li data-v-98526a88="" data-v-6e534c71="" onclick="window.location.href='https://t.me/ironspeak'">
+                        <li data-v-98526a88="" data-v-6e534c71="" onclick="window.location.href='https://t.me/+owf3P6kVIvxiZWU0'">
                             <div data-v-98526a88="" data-v-6e534c71=""><img data-v-98526a88="" data-v-6e534c71=""
                                                                             src="img/ajuda.png"
                                                                             alt="">
-                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--coffee-dark) !important;">Ajuda</p></div>
+                                <p data-v-98526a88="" data-v-6e534c71="" style="color: var(--ms-white) !important;">Ajuda</p></div>
                         </li>
                    </div>
                    
@@ -502,30 +677,35 @@
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/principal.html'">
             <div data-v-47e63dc4="" class="on"><img data-v-47e63dc4=""
                                                     src="img/lar.png"
-                                                    alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Lar </span></div>
+                                                    alt=""><span data-v-47e63dc4="" style="color: var(--ms-blue-primary) !important;"> Lar </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/tarefa.html'">
             <div data-v-47e63dc4="" class=""><img data-v-47e63dc4=""
                                                   src="img/ganho.png"
-                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Meus ganhos </span></div>
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--ms-blue-primary) !important;"> Meus ganhos </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/produtos.html'">
             <div data-v-47e63dc4="" class=""><img data-v-47e63dc4="" src="img/produtos.png"
-                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;">Plano Dourado </span></div>
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--ms-blue-primary) !important;">Plano Dourado </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/equipe.html'">
             <div data-v-47e63dc4="" class=""><img data-v-47e63dc4=""
                                                   src="img/equipe.png"
-                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Equipe </span></div>
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--ms-blue-primary) !important;"> Equipe </span></div>
         </div>
         <div data-v-47e63dc4="" class="item" onclick="window.location.href='/dashboard.html'">
             <div data-v-47e63dc4="" class=""><img data-v-47e63dc4=""
                                                   src="img/meu.png"
-                                                  alt=""><span data-v-47e63dc4="" style="color: var(--text-contrast) !important;"> Meu </span></div>
+                                                  alt=""><span data-v-47e63dc4="" style="color: var(--ms-blue-primary) !important;"> Meu </span></div>
         </div>
     </div>
 </div>
     </div>
+</div>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
 </div>
 
 <script>
@@ -566,7 +746,7 @@ function showLoading(show) {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0,0,0,0.8);
             display: flex;
             justify-content: center;
             align-items: center;

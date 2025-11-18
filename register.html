@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <title>Cadastrar-se</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#D4AF37">
+<meta name="theme-color" content="#0078D4">
 
 <meta name="description" content=" Ganhar dinheiro importante demais" />
 <meta name="keywords" content="investimentos, hamister, ganhar dinheiro" />
@@ -28,25 +28,28 @@ window.addEventListener('resize', function() {
 <script type="text/javascript" src="public.js"></script>
 
 <style>
-/* Cores douradas definidas */
+/* Cores Microsoft definidas */
 :root {
-  --gold-primary: #D4AF37;
-  --gold-secondary: #FFD700;
-  --gold-dark: #B8860B;
-  --gold-light: #FFF8DC;
-  --gold-accent: #FFC125;
-  --gold-cream: #FFFFFF;
-  --gold-lighter: #F8F8F8;
-  --gold-shadow: rgba(212, 175, 55, 0.3);
-  --gold-gradient: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
-  --gold-gradient-light: linear-gradient(135deg, var(--gold-secondary) 0%, var(--gold-accent) 100%);
+  --ms-blue-primary: #0078D4;
+  --ms-blue-secondary: #0078D4;
+  --ms-blue-dark: #0078D4;
+  --ms-blue-light: #0078D4;
+  --ms-blue-accent: #0078D4;
+  --ms-gray-light: #0078D4;
+  --ms-gray-medium: #0078D4;
+  --ms-gray-dark: #0078D4;
+  --ms-white: #0078D4;
+  --ms-black: #0078D4;
+  --ms-shadow: rgba(0, 120, 212, 1);
+  --ms-gradient: linear-gradient(135deg, #0078D4 0%, #0078D4 100%);
+  --ms-gradient-light: linear-gradient(135deg, #0078D4 0%, #0078D4 100%);
 }
 
 body {
-  background: linear-gradient(135deg, #0c0c0c 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #0078D4 0%, #0078D4 100%);
   background-size: 100% 260px;
   background-repeat: no-repeat;
-  color: #ffffff;
+  color: var(--ms-white);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -55,7 +58,7 @@ body {
   text-align: center;
   font-size: 22px;
   font-weight: 700;
-  color: var(--gold-secondary);
+  color: var(--ms-blue-accent);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -67,7 +70,7 @@ body {
   background-color: rgba(45, 45, 45, 0.9);
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--gold-primary);
+  border: 1px solid var(--ms-blue-primary);
   border-bottom: none;
 }
 
@@ -85,14 +88,14 @@ body {
   padding: 10px !important;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  border: 1px solid var(--gold-primary);
+  border: 1px solid var(--ms-blue-primary);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .u-form-item .u-form-item__body:focus-within {
-  border-color: var(--gold-secondary);
-  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-color: var(--ms-blue-accent);
+  box-shadow: 0 0 0 2px rgba(80, 230, 255, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .u-form-item__body {
@@ -130,7 +133,7 @@ body {
   padding: 0;
   margin: 0;
   text-decoration: inherit;
-  color: #ffffff;
+  color: var(--ms-white);
   font-weight: 500;
   font-size: 16px;
 }
@@ -139,15 +142,15 @@ body {
   display: block;
   text-align: center;
   margin: 20px 30px 15px 30px;
-  color: #1a1a1a;
-  background: var(--gold-gradient) !important;
+  color: var(--ms-white);
+  background: var(--ms-gradient) !important;
   font-weight: 700;
   border-radius: 12px;
   padding: 15px 0;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 15px var(--gold-shadow);
+  box-shadow: 0 4px 15px var(--ms-shadow);
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -172,7 +175,7 @@ body {
 
 .container .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 120, 212, 0.4);
 }
 
 .container .btn:active {
@@ -183,7 +186,7 @@ body {
   display: block;
   text-align: center;
   font-weight: 500;
-  color: var(--gold-light);
+  color: var(--ms-blue-light);
   font-size: 14px;
   text-align: center;
   margin-bottom: 20px;
@@ -198,29 +201,29 @@ body {
   width: 100%;
   text-align: center;
   margin-bottom: 25px;
-  color: var(--gold-secondary);
+  color: var(--ms-blue-accent);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .container .form .btn-bottom:hover {
-  color: var(--gold-primary);
+  color: var(--ms-blue-primary);
   text-decoration: underline;
 }
 
 .guojia-list-item {
   padding: 12px 15px;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-  color: var(--gold-light);
+  border-bottom: 1px solid rgba(0, 120, 212, 0.2);
+  color: var(--ms-blue-light);
   transition: all 0.2s ease;
   background: rgba(45, 45, 45, 0.9);
   cursor: pointer;
 }
 
 .guojia-list-item:hover {
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--gold-secondary);
+  background: rgba(0, 120, 212, 0.1);
+  color: var(--ms-blue-accent);
 }
 
 /* Estilos adicionais para loading */
@@ -241,8 +244,8 @@ body {
 .loading-spinner {
   width: 60px;
   height: 60px;
-  border: 4px solid rgba(212, 175, 55, 0.3);
-  border-top: 4px solid var(--gold-primary);
+  border: 4px solid rgba(0, 120, 212, 0.3);
+  border-top: 4px solid var(--ms-blue-primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -254,9 +257,9 @@ body {
 
 /* Estilo para o cabeçalho fixo */
 div[style*="position:fixed"] {
-  background: var(--gold-gradient) !important;
+  background: var(--ms-gradient) !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid var(--gold-primary);
+  border-bottom: 1px solid var(--ms-blue-primary);
 }
 
 /* Estilo para o link de suporte */
@@ -269,13 +272,13 @@ span[style*="color:#f73131"] a:hover {
   transform: scale(1.1);
 }
 
-/* Adicionando efeitos dourados extras */
+/* Adicionando efeitos Microsoft extras */
 .u-icon__img img {
-  filter: sepia(100%) saturate(1000%) hue-rotate(0deg);
+  filter: brightness(0) invert(1);
 }
 
 .container .form .u-form-item__body__left__content__icon .u-icon {
-  color: var(--gold-secondary);
+  color: var(--ms-blue-accent);
 }
 
 /* Efeito de brilho no cabeçalho */
@@ -286,7 +289,7 @@ div[style*="position:fixed"]::after {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold-secondary), transparent);
+  background: linear-gradient(90deg, transparent, var(--ms-blue-accent), transparent);
   animation: shimmer 2s infinite;
 }
 
@@ -298,37 +301,37 @@ div[style*="position:fixed"]::after {
 
 /* Logo styling */
 div[style*="margin-top:45px"] img {
-  border: 3px solid var(--gold-primary);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  border: 3px solid var(--ms-blue-primary);
+  box-shadow: 0 0 20px rgba(0, 120, 212, 0.5);
   transition: all 0.3s ease;
 }
 
 div[style*="margin-top:45px"] img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+  box-shadow: 0 0 30px rgba(80, 230, 255, 0.7);
 }
 
 /* Layer popup styling */
 .layui-layer {
   border-radius: 12px !important;
-  border: 1px solid var(--gold-primary) !important;
+  border: 1px solid var(--ms-blue-primary) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
   background: rgba(45, 45, 45, 0.95) !important;
   backdrop-filter: blur(10px);
 }
 
 .layui-layer-content {
-  color: var(--gold-light) !important;
+  color: var(--ms-blue-light) !important;
   background: transparent !important;
 }
 
 .layui-layer-btn {
-  border-top: 1px solid rgba(255, 215, 0, 0.2) !important;
+  border-top: 1px solid rgba(0, 120, 212, 0.2) !important;
 }
 
 .layui-layer-btn a {
-  background: var(--gold-gradient) !important;
-  color: #1a1a1a !important;
+  background: var(--ms-gradient) !important;
+  color: var(--ms-white) !important;
   border: none !important;
   border-radius: 6px !important;
   font-weight: 600 !important;
@@ -336,7 +339,7 @@ div[style*="margin-top:45px"] img:hover {
 
 /* Country code selector */
 #quhao {
-  color: var(--gold-secondary) !important;
+  color: var(--ms-blue-accent) !important;
   font-weight: 700 !important;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -345,8 +348,8 @@ div[style*="margin-top:45px"] img:hover {
 }
 
 #quhao:hover {
-  color: var(--gold-primary) !important;
-  background: rgba(212, 175, 55, 0.1);
+  color: var(--ms-blue-primary) !important;
+  background: rgba(0, 120, 212, 0.1);
 }
 
 /* Código de convite styling */
@@ -355,8 +358,8 @@ div[style*="margin-top:45px"] img:hover {
 }
 
 .ref-badge {
-  background: var(--gold-gradient);
-  color: #1a1a1a;
+  background: var(--ms-gradient);
+  color: var(--ms-white);
   padding: 4px 10px;
   border-radius: 15px;
   font-size: 12px;
@@ -364,7 +367,7 @@ div[style*="margin-top:45px"] img:hover {
   margin-left: 10px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px var(--gold-shadow);
+  box-shadow: 0 2px 8px var(--ms-shadow);
 }
 
 /* Mensagem de sucesso */
@@ -415,9 +418,9 @@ div[style*="margin-top:45px"] img:hover {
 </head>
 <body ontouchstart="">
 
-<div style="height:60px;"><div style="width:100%;height:59px;line-height:59px;position:fixed;top:0;left:0;z-index:999999;background: var(--gold-gradient);"><span style="position:absolute;right:10px;font-size:14px;color:#fff;letter-spacing:1px;"><a target="_blank" href="https://t.me/ironspeak"><img src="https://i.postimg.cc/CLvcSTY3/icon-kefu3.png" style="width:28px;height:28px;" /></a></span></div></div>
+<div style="height:60px;"><div style="width:100%;height:59px;line-height:59px;position:fixed;top:0;left:0;z-index:999999;background: var(--ms-gradient);"><span style="position:absolute;right:10px;font-size:14px;color:#fff;letter-spacing:1px;"><a target="_blank" href="https://t.me/+owf3P6kVIvxiZWU0"><img src="https://i.postimg.cc/CLvcSTY3/icon-kefu3.png" style="width:28px;height:28px;" /></a></span></div></div>
 
-<div style="margin-top:45px;text-align:center;"><img src="img/log.jpg" alt="logo" style="width:110px;height:110px;border-radius:50%;box-shadow:0 4px 15px var(--gold-shadow);"></div>
+<div style="margin-top:45px;text-align:center;"><img src="img/log.jpg" alt="logo" style="width:110px;height:110px;border-radius:50%;box-shadow:0 4px 15px var(--ms-shadow);"></div>
 
 <!-- Overlay de loading -->
 <div class="loading-overlay" id="loadingOverlay">
@@ -443,7 +446,7 @@ div[style*="margin-top:45px"] img:hover {
                                         <img src="https://i.postimg.cc/8Cq1Y0jW/shoujitubiao.png" style="display:block;width: 100%; height: 100%;">
                                     </div>
                                     <input id="area_codei" name="area_code" type="text" value="244" style="display:none;" required>
-                                    <div style="width:40px;height:22px;color: var(--gold-secondary);font-weight:600;" id="quhao" onclick="quhao_select()">+<span id="area_code">244</span></div>
+                                    <div style="width:40px;height:22px;color: var(--ms-blue-accent);font-weight:600;" id="quhao" onclick="quhao_select()">+<span id="area_code">244</span></div>
                                 </div>
                             </div>
                         </div>
@@ -551,7 +554,7 @@ function quhao_select() {
         type: 1,
         content: '<div style="padding:0 10px;background-color: rgba(45, 45, 45, 0.95); border-radius: 12px;"><div style="height:200px;overflow-y:scroll;"><div class="guojia-list-item" onclick="qhselect(1)">(USA) +1</div><div class="guojia-list-item" onclick="qhselect(7)">(Russia) +7</div><div class="guojia-list-item" onclick="qhselect(20)">(Egypt) +20</div><div class="guojia-list-item" onclick="qhselect(27)">(South Africa) +27</div><div class="guojia-list-item" onclick="qhselect(30)">(Greece) +30</div><div class="guojia-list-item" onclick="qhselect(31)">(Netherlands) +31</div><div class="guojia-list-item" onclick="qhselect(32)">(Belgium) +32</div><div class="guojia-list-item" onclick="qhselect(33)">(France) +33</div><div class="guojia-list-item" onclick="qhselect(34)">(Spain) +34</div><div class="guojia-list-item" onclick="qhselect(39)">(Italy) +39</div><div class="guojia-list-item" onclick="qhselect(40)">(Romania) +40</div><div class="guojia-list-item" onclick="qhselect(41)">(Switzerland) +41</div><div class="guojia-list-item" onclick="qhselect(43)">(Austria) +43</div><div class="guojia-list-item" onclick="qhselect(44)">(United Kingdom) +44</div><div class="guojia-list-item" onclick="qhselect(45)">(Denmark) +45</div><div class="guojia-list-item" onclick="qhselect(46)">(Sweden) +46</div><div class="guojia-list-item" onclick="qhselect(47)">(Norway) +47</div><div class="guojia-list-item" onclick="qhselect(48)">(Poland) +48</div><div class="guojia-list-item" onclick="qhselect(49)">(Germany) +49</div><div class="guojia-list-item" onclick="qhselect(51)">(Peru) +51</div><div class="guojia-list-item" onclick="qhselect(52)">(Mexico) +52</div><div class="guojia-list-item" onclick="qhselect(53)">(Cuba) +53</div><div class="guojia-list-item" onclick="qhselect(54)">(Argentina) +54</div><div class="guojia-list-item" onclick="qhselect(55)">(Brazil) +55</div><div class="guojia-list-item" onclick="qhselect(56)">(Chile) +56</div><div class="guojia-list-item" onclick="qhselect(57)">(Colombia) +57</div><div class="guojia-list-item" onclick="qhselect(58)">(Venezuela) +58</div><div class="guojia-list-item" onclick="qhselect(60)">(Malaysia) +60</div><div class="guojia-list-item" onclick="qhselect(61)">(Australia) +61</div><div class="guojia-list-item" onclick="qhselect(62)">(Indonesia) +62</div><div class="guojia-list-item" onclick="qhselect(63)">(Philippines) +63</div><div class="guojia-list-item" onclick="qhselect(64)">(New Zealand) +64</div><div class="guojia-list-item" onclick="qhselect(65)">(Singapore) +65</div><div class="guojia-list-item" onclick="qhselect(66)">(Thailand) +66</div><div class="guojia-list-item" onclick="qhselect(81)">(Japan) +81</div><div class="guojia-list-item" onclick="qhselect(82)">(South Korea) +82</div><div class="guojia-list-item" onclick="qhselect(84)">(Vietnam) +84</div><div class="guojia-list-item" onclick="qhselect(86)">(China) +86</div><div class="guojia-list-item" onclick="qhselect(90)">(Turkey) +90</div><div class="guojia-list-item" onclick="qhselect(91)">(India) +91</div><div class="guojia-list-item" onclick="qhselect(92)">(Pakistan) +92</div><div class="guojia-list-item" onclick="qhselect(93)">(Afghanistan) +93</div><div class="guojia-list-item" onclick="qhselect(94)">(Sri Lanka) +94</div><div class="guojia-list-item" onclick="qhselect(95)">(Myanmar) +95</div><div class="guojia-list-item" onclick="qhselect(98)">(Iran) +98</div><div class="guojia-list-item" onclick="qhselect(213)">(Algeria) +213</div><div class="guojia-list-item" onclick="qhselect(216)">(Tunisia) +216</div><div class="guojia-list-item" onclick="qhselect(218)">(Libya) +218</div><div class="guojia-list-item" onclick="qhselect(220)">(Gambia) +220</div><div class="guojia-list-item" onclick="qhselect(221)">(Senegal) +221</div><div class="guojia-list-item" onclick="qhselect(222)">(Mauritania) +222</div><div class="guojia-list-item" onclick="qhselect(223)">(Mali) +223</div><div class="guojia-list-item" onclick="qhselect(224)">(Guinea) +224</div><div class="guojia-list-item" onclick="qhselect(225)">(Côte d\'Ivoire) +225</div><div class="guojia-list-item" onclick="qhselect(226)">(Burkina Faso) +226</div><div class="guojia-list-item" onclick="qhselect(227)">(Niger) +227</div><div class="guojia-list-item" onclick="qhselect(228)">(Togo) +228</div><div class="guojia-list-item" onclick="qhselect(229)">(Benin) +229</div><div class="guojia-list-item" onclick="qhselect(230)">(Mauritius) +230</div><div class="guojia-list-item" onclick="qhselect(231)">(Liberia) +231</div><div class="guojia-list-item" onclick="qhselect(232)">(Sierra Leone) +232</div><div class="guojia-list-item" onclick="qhselect(233)">(Ghana) +233</div><div class="guojia-list-item" onclick="qhselect(234)">(Nigeria) +234</div><div class="guojia-list-item" onclick="qhselect(235)">(Chad) +235</div><div class="guojia-list-item" onclick="qhselect(237)">(Cameroon) +237</div><div class="guojia-list-item" onclick="qhselect(238)">(Cape Verde) +238</div><div class="guojia-list-item" onclick="qhselect(974)">(Qatar) +974</div><div class="guojia-list-item" onclick="qhselect(994)">(Azerbaijan) +994</div></div></div>',
         anim: 'up',
-        style: 'position:fixed; bottom:0; left:0; width: 100%; height: 200px; padding:10px 0; border:none; background-color: rgba(45, 45, 45, 0.95); box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); border-top: 1px solid var(--gold-primary); border-radius: 12px 12px 0 0;'
+        style: 'position:fixed; bottom:0; left:0; width: 100%; height: 200px; padding:10px 0; border:none; background-color: rgba(45, 45, 45, 0.95); box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5); border-top: 1px solid var(--ms-blue-primary); border-radius: 12px 12px 0 0;'
     });
 }
 
